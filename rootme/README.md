@@ -2,7 +2,7 @@
 
 A beginner-friendly walkthrough documenting the exploitation and privilege escalation steps for the RootMe room on TryHackMe.
 ![Difficulty](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
-![Platform](https://img.shields.io/badge/Platform-TryHackMe-blue)
+![Platform](https://img.shields.io/badge/Platform-TryHackMe-red)
 
 [🔗 RootMe Room on TryHackMe](https://tryhackme.com/room/rrootme)
 
