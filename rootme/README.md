@@ -43,6 +43,7 @@ Quickly the scan revealed a /uploads directory, which suggested the target might
 
 ## Exploitation
 Here we are, at the upload panel. Let’s try uploading a PHP reverse shell and see if we can make progress.
+
  <img width="600" height="569" alt="image" src="https://github.com/user-attachments/assets/04bffa27-10c1-4320-b056-74d4cbffe712" />
 
 
@@ -54,6 +55,7 @@ mv shell.php shell.php5
  <img width="600" height="608" alt="image" src="https://github.com/user-attachments/assets/ca7b739e-5119-4ae0-8929-2c1c969a0646" />
 
 <br>Navigating to the /uploads directory confirmed our shell had been uploaded.
+
 <img width="600" height="324" alt="image" src="https://github.com/user-attachments/assets/733140df-29a7-4a7f-a602-18e80e2ea93b" />
 
 
@@ -64,6 +66,7 @@ mv shell.php shell.php5
 
 Before executing the script, we need to set up a Netcat listener on our attacking machine:
 Executing the shell gave us a session as 'www-data'.
+
  <img width="750" height="275" alt="image" src="https://github.com/user-attachments/assets/feabdb87-3745-4dab-a481-51f03aa99fad" />
 
 
@@ -90,6 +93,7 @@ One binary that stood out as unusual was /usr/bin/python. Searching GTFOBins con
 
 
 <br>After executing the provided GTFOBins payload, I successfully escalated privileges to root.
+
  <img width="750" height="133" alt="image" src="https://github.com/user-attachments/assets/392e1800-ab40-4ead-bbbe-d5d9c50d30fb" />
 
 
