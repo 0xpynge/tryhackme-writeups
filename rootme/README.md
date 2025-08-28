@@ -81,7 +81,8 @@ find / -user root -perm /4000 2> /dev/null
 
 
 One binary that stood out as unusual was /usr/bin/python. Searching GTFOBins confirmed that Python with SUID can be exploited for privilege escalation.
- <img width="750" height="296" alt="image" src="https://github.com/user-attachments/assets/ce77d985-6934-4304-a541-1de5f8b7b1d9" />
+
+<img width="750" height="296" alt="image" src="https://github.com/user-attachments/assets/ce77d985-6934-4304-a541-1de5f8b7b1d9" />
 
 
 After executing the provided GTFOBins payload, I successfully escalated privileges to root.
