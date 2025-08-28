@@ -7,16 +7,6 @@ Each folder in this repo corresponds to a room, with a detailed `README.md` and 
 
 ---
 
-## 🛠 Tools Frequently Used
-These are tools I commonly use in the rooms:
-- **Nmap** → Network scanning  
-- **Gobuster / Dirb** → Directory brute forcing  
-- **Netcat** → Reverse shells & listeners  
-- **LinPEAS** → Linux privilege escalation enumeration  
-- **GTFOBins** → Known privilege escalation techniques  
-
----
-
 ## 🚀 Goals
 - Practice **CTF methodology** (enumeration → exploitation → escalation).  
 - Build a personal **knowledge base** of attack vectors.  
@@ -27,4 +17,4 @@ These are tools I commonly use in the rooms:
 ## 📝 Notes
 - Some writeups may contain spoilers.  
 - I try to include **screenshots, commands, and explanations** for clarity.  
-- Feedback is always welcome — feel free to open an issue or PR if you spot improvements!  
+- Feedback is always welcome, feel free to open an issue or PR if you spot improvements!  
