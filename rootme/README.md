@@ -84,7 +84,7 @@ find / -name user.txt 2>/dev/null
 ## Privilege Escalation
 After some enumeration I decided to look for files that have SUID permission with the command:
 ```bash
-find / -user root -perm /4000 2>/dev/null
+find / -perm -4000 2>/dev/null
 ```
  <img width="750" height="544" alt="image" src="https://github.com/user-attachments/assets/4683a5d5-e4cf-43bd-aa1c-554d702df510" />
 
