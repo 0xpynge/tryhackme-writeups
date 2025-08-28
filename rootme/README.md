@@ -22,6 +22,7 @@ nmap -sV <ip>
 <img width="750" height="219" alt="image" src="https://github.com/user-attachments/assets/68602032-5ecd-45fe-b111-407cfa8bc46d" />
 
 As we can see from the Nmap scan, we have ports open for SSH and HTTP. The first step I took was to visit the webserver and then run a gobuster scan to discover hidden directories that may lead to a vulnerability.  
+
  <img width="750" height="319" alt="image" src="https://github.com/user-attachments/assets/d458d8ff-35b2-4e3c-916c-c4059863fcab" />
 
 > The index.html webpage didn’t offer anything useful, so let’s begin with directory enumeration.<br>
