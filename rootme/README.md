@@ -1,8 +1,16 @@
 # TryHackMe RootMe Challenge
 
 A beginner-friendly walkthrough documenting the exploitation and privilege escalation steps for the RootMe room on TryHackMe.
+![Difficulty](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
+![Platform](https://img.shields.io/badge/Platform-TryHackMe-blue)
 
 [🔗 RootMe Room on TryHackMe](https://tryhackme.com/room/rrootme)
+
+---
+## Disclaimer
+This writeup is for **educational purposes only**.  
+Do not attempt these techniques on systems you do not own or have explicit authorization to test.
+
 ---
 ## Table of Contents
 - [Enumeration](#enumeration)
