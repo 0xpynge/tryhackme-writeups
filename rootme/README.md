@@ -65,7 +65,8 @@ mv shell.php shell.php5
 
 
 Before executing the script, we need to set up a Netcat listener on our attacking machine:
-Executing the shell gave us a session as 'www-data'.
+
+> Executing the shell gave us a session as 'www-data'.
 
  <img width="750" height="275" alt="image" src="https://github.com/user-attachments/assets/feabdb87-3745-4dab-a481-51f03aa99fad" />
 
