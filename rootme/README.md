@@ -7,7 +7,7 @@ A beginner-friendly walkthrough documenting the exploitation and privilege escal
 [🔗 RootMe Room on TryHackMe](https://tryhackme.com/room/rrootme)
 
 ---
-## Disclaimer
+## Disclaimer⚠️
 This writeup is for **educational purposes only**.  
 Do not attempt these techniques on systems you do not own or have explicit authorization to test.
 
