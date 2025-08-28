@@ -2,6 +2,14 @@
 
 A beginner-friendly walkthrough documenting the exploitation and privilege escalation steps for the RootMe room on TryHackMe.
 
+
+---
+## Table of Contents
+- [Enumeration](#enumeration)
+- [Exploitation](#exploitation)
+- [Privilege Escalation](#privilege-escalation)
+- [Summary](#summary)
+
 ---
 
 ## Enumeration
@@ -61,16 +69,7 @@ Executing the shell gave us a session as 'www-data'.
 After stabilizing the shell, I used the find command to search for the user flag.
  
 
-
 <img width="750" height="248" alt="image" src="https://github.com/user-attachments/assets/ed540e59-d3c8-4bae-a284-5413248a6b6e" />
-
-
-
-
-
-
-
-
 
 
 ## Privilege Escalation
@@ -94,3 +93,10 @@ After executing the provided GTFOBins payload, I successfully escalated privileg
 All that was left to do was capture the root flag, located in /root/root.txt:
  
 <img width="600" height="453" alt="image" src="https://github.com/user-attachments/assets/133ac335-f5c0-4df6-be35-56a1573a4b2a" />
+
+## Summary
+- **Enumeration:** Nmap found SSH/HTTP, GoBuster revealed `/uploads` and `/panel`.
+- **Exploitation:** Bypassed upload filter with `.php5`, gained reverse shell as `www-data`.
+- **Privilege Escalation:** Abused SUID `/usr/bin/python` → root shell.
+- **Flags:** Captured user + root.
+
