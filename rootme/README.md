@@ -4,7 +4,7 @@ A beginner-friendly walkthrough documenting the exploitation and privilege escal
 ![Difficulty](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
 ![Platform](https://img.shields.io/badge/Platform-TryHackMe-red)
 
-[🔗 RootMe Room on TryHackMe](https://tryhackme.com/room/rrootme)
+🔗[RootMe Room on TryHackMe](https://tryhackme.com/room/rrootme)
 
 ---
 ## Disclaimer⚠️
