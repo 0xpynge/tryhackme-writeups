@@ -6,7 +6,7 @@ A beginner-friendly walkthrough documenting the exploitation and privilege escal
 
 ## Enumeration
 
-Nmap:
+### Nmap:
 
 ```bash
 nmap -sV <ip>
@@ -21,7 +21,7 @@ The index.html webpage didn’t offer anything useful, so let’s begin with dir
 
 
 
-GoBuster:
+### GoBuster:
 ```bash
 gobuster dir -u http://<ip> -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
  ```
@@ -38,7 +38,9 @@ Here we are, at the upload panel. Let’s try uploading a PHP reverse shell and 
 
 
 The application blocked .php extensions. To bypass this, I renamed the reverse shell file to .php5, which was accepted.
- <img width="450" height="90" alt="image" src="https://github.com/user-attachments/assets/608200ad-3f10-421d-8983-67f42c29fcde" />
+ ```bash
+mv shell.php shell.php5
+```
 
  <img width="600" height="608" alt="image" src="https://github.com/user-attachments/assets/ca7b739e-5119-4ae0-8929-2c1c969a0646" />
 
