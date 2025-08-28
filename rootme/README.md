@@ -1,6 +1,7 @@
 # TryHackMe RootMe Challenge
 
 A beginner-friendly walkthrough documenting the exploitation and privilege escalation steps for the RootMe room on TryHackMe.
+
 [🔗 RootMe Room on TryHackMe](https://tryhackme.com/room/rrootme)
 ---
 ## Table of Contents
