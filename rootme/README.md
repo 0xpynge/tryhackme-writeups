@@ -37,7 +37,7 @@ Here we are, at the upload panel. Let’s try uploading a PHP reverse shell and 
  <img width="600" height="569" alt="image" src="https://github.com/user-attachments/assets/04bffa27-10c1-4320-b056-74d4cbffe712" />
 
 
-The application blocked .php extensions. To bypass this, I renamed the reverse shell file to .php5, which was accepted.
+The application blocked .php extensions. To bypass this, I renamed the reverse shell file to .php5, using the command:
  ```bash
 mv shell.php shell.php5
 ```
