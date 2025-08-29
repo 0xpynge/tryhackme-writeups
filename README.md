@@ -3,6 +3,7 @@
 A collection of my personal **TryHackMe** walkthroughs and writeups.  
 Each folder in this repo corresponds to a room, with a detailed `README.md` and screenshots.  
 
+⚠️ **Disclaimer:** These writeups are for **educational purposes only**. Do not attempt these techniques on systems you do not own or have explicit permission to test.  
 
 ---
 
