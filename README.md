@@ -1,4 +1,4 @@
-# TryHackMe Writeup
+# TryHackMe Writeups
 
 A collection of my personal **TryHackMe** walkthroughs and writeups.  
 Each folder in this repo corresponds to a room, with a detailed `README.md` and screenshots.  
